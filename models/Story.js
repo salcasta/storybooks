@@ -4,7 +4,7 @@ const StorySchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   body: {
     type: String,
@@ -17,7 +17,8 @@ const StorySchema = new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    required: true,
   },
   createdAt: {
     type: Date,
